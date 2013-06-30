@@ -52,9 +52,38 @@ RubyMotion のみに関わらず、mruby, mobiruby, Unity など、組み込み�
 
 やはり東京と比較しても福岡では特に組み込みの盛り上がりが大きいらしいという印象を持ちました。
 
+
 ### RubyMotion 2.0: @watson1978 さん
 
 <script async class="speakerdeck-embed" data-id="9f6aa220aaaa01303c9b3e7747c857c8" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
+
+@watson1978 さんは MacRuby の主要なコミッターであり、かつ HipByte 社のメンバーとして日本からリモートで RubyMotion の開発に携わっていらっしゃいます。
+
+まずは MacRuby との出会いやそのコミッターになる __契約__ を交わしたエピソードが公開されました。
+
+その後は RubyMotion の仕組みや特徴についてのお話、RubyMotion 2.0 で搭載された以下の新機能の詳しい紹介をしていただきました。
+
+**OS X Support**  
+Mac OS X 用のアプリケーションが作れるようになりました。以下の点で MacRuby と比べて以下のような特徴があります。
+
+- 事前にネイティブにフルコンパイルしているからパフォーマンスが良い
+- スタティックライブラリーが使える
+- require, eval, 標準ライブラリーが使えない
+
+**Project Template**  
+ユーザーが独自のテンプレートを作れる機能です。よく使う gem をあらかじめ Gemfile に書いておいたり、app_delegate.rb で @window をインスタンス化する以下のようなお決まりのコードをテンプレート化しておけます。
+
+**Command-Line Plugin**  
+ユーザー独自のサブコマンドを `motion` コマンドに追加できる機能です。@watson1978 さんがサンプルで作った [motion-doc](https://github.com/Watson1978/motion-doc) コマンドの紹介がありました。
+
+**Common Build Directory**  
+一度コンパイルした gem を他のアプリでも使い回せるようにし、ビルド時間を短縮する機能です。特に [BubbleWrap](http://bubblewrap.io) や [sugarcube](https://github.com/rubymotion/sugarcube) のような大きなライブラリを使うときに効果が発揮されるそうです。
+
+**Weak Reference**  
+弱参照をサポートする機能です。RubyMotion には ARC 同様のリファレンスカウンタによる GC が実装されています。オブジェクトを代入する際には自動的にリファレンスカウンタが上がるようになっているのですが、この `WeakRef` を使用することで、リファレンスカウンタを上げずにオブジェクトを参照することが出来ます。
+
+
+質疑応答の際には Laurent さんから発表資料のデータに関する質問が飛んでいました。
 
 
 ### 実践 RubyMotion: @naoya_ito さん
