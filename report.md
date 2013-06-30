@@ -44,7 +44,7 @@ RubyMotion のリリースから 1 年が経ったこと、数多くの RubyMoti
 Q. CRuby 2.0 の機能 (Refinements, Keyword Arguments, ..etc.) は RubyMotion でもサポートする予定ですか？  
 A. その予定はあるけれども、すぐに出来るとは限らない。特に Keyword Arguments は文法的に Objective-C のメソッドのシグネチャとバッティングしてしまうところがあり、扱いが難しい。
 
-# TODO: ust 見ながら内容についてもう少し詳しく述べる
+\# TODO: ust 見ながら内容についてもう少し詳しく述べる
 
 ### 日本における RubyMotion の現状: Ruby Business Commons 最首さん
 
@@ -90,10 +90,40 @@ Mac OS X 用のアプリケーションが作れるようになりました。�
 
 <script async class="speakerdeck-embed" data-id="1cd72a90aaf701306ef82e07ed1e0849" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
+アプリケーション実装者の視点から見た RubyMotion について発表していただきました。
+
+まずは RubyMotion の特徴と簡単なコード例を示し、Objective-C の知識が無くても RubyMotion でアプリケーションを開発することは可能だが iOS の知識は必要である、という点について説明をしていただきました。
+
+つまり Objective-C の代わりに言語を Ruby を使用しているだけであって、フレームワークは Cocoa Touch を使用しているのでフレームワークについての知識は必要になる (学ぶ必要がある) とのことです。
+
+続いて、RubyMotion における `Object` クラスは `NSObject` クラスを継承している作りとなっているため、Cocoa (Touch) の API がそのまま呼べることについての説明がありました。
+
+GCD を使うことによって並行処理も以下のコード例のように Ruby らしくスマートに書けます。
+
+```
+Dispatche::Queue.concurrent.async do
+  image = UIImage.alloc.initWithData(
+    NSData.dataWithContentsOfURL(url.nsurl)
+  )
+
+  Dispatch::Queue.main.sync do
+    @imageView.image = image
+  end
+end
+```
+
+RubyMotion のメモリ管理についての説明もありました。
+
+RubyMotion についての説明はここまでで、あとは (主にスベッた) ネタを交えながら実際に RubyMotion で開発する上での Tips や、定番のライブラリの紹介等がありました。
+
+詳しくは [スライド](https://speakerdeck.com/naoya/shi-jian-rubymotion) を見ていただくと詳しく書かれていますので良いかと思われます。
+
 
 ### That Objective-C guy think about RubyMotion: @mfks17 さん
 
 <script async class="speakerdeck-embed" data-id="36a786d0aab101303c9b3e7747c857c8" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
+
+
 
 
 ### LT1 / #inspect 2013 - RubyMotion Conrefence の感想: 井上さん
