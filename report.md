@@ -23,7 +23,7 @@ RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では�
 
 カンファレンスとは言っても、前述のようにベルギーで世界規模のカンファレンスが開催された直後であるため、日本における RubyMotion の現状やもともと Objective-C で iOS アプリケーションを開発していた人の RubyMotion の印象を話してもらうなどの独自のコンテンツがある方が楽しいのではないか、などと議論し、今回のような形での開催となりました。
 
-企画・準備・当日の運営までもくもく会の常連メンバーが中心となって進めてゆきましたが、せっかく日本で開催するのであれば東京だけではなく、以前から RubyMotion に関するイベントを複数回の開催されている九州のコミュニティとも協力したいと思い、Ruby Business Commons 最首さんにも声をかけ、ご協力いただきました。
+企画・準備・当日の運営までもくもく会の常連メンバーが中心となって進めてゆきましたが、せっかく日本で開催するのであれば東京だけではなく、以前から RubyMotion に関するイベントを複数回の開催されている福岡のコミュニティとも協力したいと思い、Ruby Business Commons 最首さんにも声をかけ、ご協力いただきました。
 
 
 ## 当日の様子
@@ -31,8 +31,26 @@ RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では�
 
 ### 基調講演: Laurent Sansonetti さん
 
+なんと、冒頭は日本語でスピーチしてくれました。 (手元の iPhone に watson さん監修のローマ字メモがあったそうです。)
+
+日本語で自己紹介と、スト 2 の地図を使用してベルギーの位置を確認した後は普通に英語で RubyMotion についての紹介をしていただきました。
+
+RubyMotion のリリースから 1 年が経ったこと、数多くの RubyMotion 製の iOS アプリケーションが App Store で配布されてることなど。
+
+その中でも RubyMotion 2.0 についての話が、現在 RubyMotion を使用している人にとっては特に興味深かったかと思われます。
+
+質疑応答では以下の2つが出されました。
+
+Q. CRuby 2.0 の機能 (Refinements, Keyword Arguments, ..etc.) は RubyMotion でもサポートする予定ですか？  
+A. その予定はあるけれども、すぐに出来るとは限らない。特に Keyword Arguments は文法的に Objective-C のメソッドのシグネチャとバッティングしてしまうところがあり、扱いが難しい。
+
+# TODO: ust 見ながら内容についてもう少し詳しく述べる
+
 ### 日本における RubyMotion の現状: Ruby Business Commons 最首さん
 
+RubyMotion のみに関わらず、mruby, mobiruby, Unity など、組み込みやスマートフォンという大きな括りで昨今 Ruby が注目を浴びているというお話をしていただきました。
+
+やはり東京と比較しても福岡では特に組み込みの盛り上がりが大きいらしいという印象を持ちました。
 
 ### RubyMotion 2.0: @watson1978 さん
 
@@ -49,7 +67,7 @@ RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では�
 <script async class="speakerdeck-embed" data-id="36a786d0aab101303c9b3e7747c857c8" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
 
 
-### LT1 / [#inspect 2013 - RubyMotion Conrefence](http://www.rubymotion.com/conference/) の感想: 井上さん
+### LT1 / #inspect 2013 - RubyMotion Conrefence の感想: 井上さん
 [#inspect 2013 - RubyMotion Conrefence](http://www.rubymotion.com/conference/) に参加した日本人全 4 名のうちの一人、井上さんによる発表でした。カンファレンスに参加する経緯として井上さんのボスの考え方やカンファレンスでの印象に残った発表などについてお話しいただきました。
 
 
@@ -70,6 +88,13 @@ RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では�
 
 <script async class="speakerdeck-embed" data-id="d70369f0aafa0130da893e97780925f0" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
 
+
+### Laurent さんへの Q&A コーナー
+
+
+
+Q. 割引は予定されていますか？  
+A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにするよ
 
 
 ## 参加レポートなどのまとめ
