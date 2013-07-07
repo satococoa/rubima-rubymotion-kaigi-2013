@@ -30,7 +30,7 @@ Usteam 上で [動画](http://www.ustream.tv/channel/rubymotion-kaigi-2013) が�
 
 企画・準備・当日の運営までもくもく会の常連メンバーが中心となって進めてゆきました。
 
-また、以前から RubyMotion に関するイベントを開催されている福岡のコミュニティとも協力したいと思い、Ruby Business Commons 最首さんにも声をかけさせていただき、とても快くご協力いただきました。
+また、以前から RubyMotion に関するイベントを開催されている福岡のコミュニティとも協力したいと思い Ruby Business Commons 最首さんにも声をかけさせていただき、とても快くご協力いただきました。
 
 
 ## 当日の様子
@@ -81,10 +81,10 @@ OS X 用のアプリケーションが作れるようになりました。以下
 
 - 事前にネイティブにフルコンパイルしているからパフォーマンスが良い
 - スタティックライブラリーが使える
-- require, eval, 標準ライブラリーは使え**ない**
+- require, eval, 標準ライブラリーは使えない
 
 **Project Template**  
-ユーザーが独自のテンプレートを作れる機能です。よく使う gem をあらかじめ Gemfile に書いておいたり、app_delegate.rb で @window をインスタンス化するようなお決まりのコードをテンプレート化しておけます。
+ユーザーが独自のテンプレートを作れる機能です。よく使う gem をあらかじめ Gemfile に書いておいたり、app_delegate.rb で `@window` をインスタンス化するようなお決まりのコードをテンプレート化しておけます。
 
 **Command-Line Plugin**  
 ユーザー独自のサブコマンドを `motion` コマンドに追加できる機能です。@watson1978 さんがサンプルで作った [motion-doc](https://github.com/Watson1978/motion-doc) コマンドの紹介がありました。
@@ -109,11 +109,12 @@ OS X 用のアプリケーションが作れるようになりました。以下
 
 続いて、RubyMotion における `Object` クラスは `NSObject` クラスを継承している作りとなっているため、Cocoa (Touch) の API がそのまま呼べることについての説明がありました。
 
-次に並列処理についてですが、GCD を使うことによって以下のコード例のように Ruby らしくスマートに書けます。
+次に並列処理についてですが、GCD を使うことによって以下のコード例のように Ruby らしく書くことが出来ます。
 
 ```
-Dispatche::Queue.concurrent.async do
+Dispatch::Queue.concurrent.async do
   image = UIImage.alloc.initWithData(
+    # String#nsurl は sugarcube の機能
     NSData.dataWithContentsOfURL(url.nsurl)
   )
 
@@ -132,11 +133,10 @@ RubyMotion についての説明はここまでで、あとは実際に RubyMoti
 
 <script async class="speakerdeck-embed" data-id="36a786d0aab101303c9b3e7747c857c8" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
 
-@mfks17 さんは RubyMotion 以前から iOS アプリケーションの開発を Objective-C でやっていらっしゃるそうです。
-今回は「Objective-C 経験者から見た RubyMotion」という観点からお話ししていただきました。
+@mfks17 さんには「Objective-C 経験者から見た RubyMotion」という観点からお話ししていただきました。
 
 RubyMotion でアプリケーションの開発を行うことの利点の一つとして「Xcode を使わずに済む」という点を挙げられていました。
-特にビルド等の設定に関してはわかりにくい GUI での操作ではなく、Rakefile にコードを書くというテキストベースの方法で完結できるのが良いとのことでした。
+特にビルドの設定に関してはわかりにくい GUI での操作ではなく、Rakefile にコードを書くというテキストベースの方法で完結できるのが良いとのことでした。
 
 デバッグに関しては gdb を使ってコマンドラインでのデバッグも可能ですが、RubyMotion にも対応した IDE の [RubyMine](http://www.jetbrains.com/ruby/) を利用することにより、GUI でもデバッグ可能だそうです。
 
@@ -167,7 +167,7 @@ RubyMotion でゲーム開発をするというテーマで発表していただ
 
 [Joybox](https://github.com/rubymotion/Joybox) は [#inspect 2013 - RubyMotion Conrefence](http://www.rubymotion.com/conference/) で発表されたライブラリで、@yonekawa さんは Joybox の最初のコントリビュータとして精力的に開発に関わっていらっしゃいます。
 
-まだまだ仕事で使用するには機能が不足していて辛いとのことですが、今後の開発に期待したいところです。
+まだまだ仕事で使用するには機能が不足しているとのことですが、今後の開発に期待したいところです。
 
 
 ### LT3 / RubyMotionについて本気出して考えてみました: @ainame さん
@@ -184,13 +184,13 @@ Emacs 用の RubyMotion の拡張である [motion-mode.el](https://github.com/a
 1. 初心者が入門しづらい
 1. 本当に業務で使えるか不安
 
-しかし、以下の点によりむしろ Web アプリケーションの経験がある人にとっては、むしろ新規に Objective-C で iOS の開発を覚えるよりはむしろ始めやすいのではというお話でした。
+しかし、以下の観点から考えると、Web アプリケーションの経験がある人にとっては、新規に Objective-C で iOS の開発を覚えるよりはむしろ RubyMotion の方が始めやすいのではというお話でした。
 
 - 開発スタイルが Web に近い: 使い慣れたエディタ、RSpec like なテスト、コマンドライン中心の開発スタイル、サーバー / クライアント双方を Ruby で書ける
 - サポートの返答が速い: iOS の新しいバージョンへの対応も問い合わせへの対応も速い
-- Ruby の力を信じる: rake、 gem などの便利なツールがあり、メタプログラミングが強力、そして書いていて楽しい
+- Ruby の力を信じる: rake、 gem などの便利なツールがあり、メタプログラミングが強力、そして書いていて **楽しい**
 
-@ainame さんは最近 [RubyMotionTokyo](http://rubymotion-tokyo.doorkeeper.jp) というコミュニティを立ち上げられました。現在、都内で隔週で meetup を開催されているので RubyMotion に関心のある方はぜひ参加されてはいかがでしょうか。
+@ainame さんは最近 [RubyMotionTokyo](http://rubymotion-tokyo.doorkeeper.jp) というコミュニティを立ち上げられました。都内で隔週で meetup を開催されているので RubyMotion に関心のある方はぜひ参加されてはいかがでしょうか。
 
 
 ### LT4 / RubyMotion meets IRC: @ninjinkun さん
@@ -201,7 +201,7 @@ Emacs 用の RubyMotion の拡張である [motion-mode.el](https://github.com/a
 
 今回は RubyMotion で IRC クライアントアプリをつくってみたというお話ですが、RubyMotion では Ruby の文法でメタプログラミングができ、正規表現が使えるという特徴からテキストベースのプロトコルを扱うのに向いているのではないかということがモチベーションになっているそうです。
 
-プロトコルパーサーを実装する際には node.js で書かれたコードを Ruby のコードに翻訳したらそのまま動作したり、CRuby で実装されたコードをコピー & ペーストしたらそのまま動いたといった経験をお話ししてくださいました。
+プロトコルパーサを実装する際には node.js で書かれたコードを Ruby のコードに翻訳したらそのまま動作したり、CRuby で実装されたコードをコピー & ペーストしたらそのまま動いたといった経験をお話ししてくださいました。
 
 ソケットの実装には [motion-cocoapods](https://github.com/HipByte/motion-cocoapods) 経由で [GCDAsyncSocket](https://github.com/robbiehanson/CocoaAsyncSocket) を使うことで比較的用意に実装できたそうです。
 
@@ -212,22 +212,22 @@ View は小さな HTML テンプレートエンジンを実装し、UIWebView �
 
 最後に 20 分ほど Laurent さんへの質問を受け付けるコーナーを設けました。
 
-Q. 現在 C++ で実装されたライブラリを使うには Objective-C でラップする必要がありますが、将来的にはラッパーを作らなくとも直接使えるようになる予定はありますか？  
-A. サポートする予定はない。Objective-C のラッパーを作って呼ぶようにしてほしい。
+Q. 現在 C++ で実装されたライブラリは RubyMotion からは直接扱えないが、将来的にサポートする予定は？
+A. サポートする予定はない。Objective-C でラッパーを作って RubyMotion から呼ぶようにしてほしい。
 
 Q. RubyMotion で static library を作ることができるそうだが、その方法についてのドキュメントはあるのか？  
 A. 現在は forum に投稿したメールやブログのエントリしかドキュメントと呼べる物は無いが、チュートリアルを現在準備中である。
 
 Q. RubyMotion ではなぜ ARC を使わずにメモリ管理を独自に実装しているのか？  
-A. ARC は Objective-C のコンパイラの機能であり、RubyMotion ではそもそも使えるものではない。またコンパイル時ではなく実行時にメモリ管理をすることによって、例えば循環参照を検出するなどのより面白いことができると思う。
+A. ARC は Objective-C のコンパイラの機能であり、そもそも RubyMotion では使えない。またコンパイル時ではなく実行時にメモリ管理をすることによって、例えば循環参照を検出するなどの面白いことができると思う。
 
-Q. iOS がバージョンアップしたときに RubyMotion はどういう対応をするのか？  
-A. RubyMotion では iOS のバージョンアップに対応することはユーザーが自分で対応をすることも可能であるくらい簡単である。今までも iOS の新しいバージョンが出た当日に対応するようにしている。
+Q. iOS がバージョンアップしたときに RubyMotion ではどのような対応をするのか？  
+A. RubyMotion を iOS のバージョンアップに対応させることは容易であり、iOS の新しいバージョンが出た当日に対応するようにしている。
 
 Q. RubyMotion のユーザはどのくらいいるのか？  
-A. アクティブユーザの数はわからないが、数千人くらいである。今年いっぱいで 1 万ユーザに達すると思われる。また RubyMotion で作られたアプリケーションがどのくらいストアでリリースされているのか、という点についてもわかっていないが、週に 1 つくらいの頻度ではリリースされているようだ。
+A. アクティブユーザの正確な数はわからないが、数千人くらいである。今年いっぱいで 1 万ユーザに達すると思われる。また RubyMotion で作られたアプリケーションがどのくらいストアでリリースされているのかという点についても正確には把握していないが、週に 1 つくらいの頻度ではリリースされているようだ。
 
-Q. 円安により RubyMotion が手に入りにくくなってしまったが、今後割引などは予定されているか？
+Q. 円安により RubyMotion が手に入りにくくなってしまったが、今後割引などは予定されているか？  
 A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにする。
 
 
@@ -251,11 +251,13 @@ A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにする。
 
 [RubyMotionTokyo](http://rubymotion-tokyo.doorkeeper.jp) は都内で隔週で meetup を実施しているコミュニティです。
 
-また、業務で RubyMotion を使っている人も徐々に増えて来ているらしく、会場の参加者のみなさんに「RubyMotion で仕事をしている人はいますか？」と問い合わせたところ、5〜6人の方が手を挙げていらっしゃいました。
+また、業務で RubyMotion を使っている人も徐々に増えて来ているらしく、会場の参加者のみなさんに「RubyMotion で仕事をしている人はいますか？」と問いかけたところ、5〜6人の方が手を挙げていらっしゃいました。
 
-2012 年の 7 月に開催した [第一回 RubyMotion 勉強会](http://connpass.com/event/665/) のときは一人しかいなかったので、徐々に広がりつつある感触があります。
+コミュニティの盛り上がりと共に開発環境やライブラリが充実し、RubyMotion を使ってたくさんの素晴らしいアプリケーションが開発されることを望みます。
 
-コミュニティの盛り上がりと共に開発環境がますます改善され、RubyMotion を使ってたくさんの素晴らしいアプリケーションが開発されることを望みます。
+最後に、発表や当日スタッフをしていただいた皆様をはじめ RubyMotion Kaigi 2013 にご協力いただいた全ての皆様、そして参加者の皆様に感謝の言葉を述べることで本レポートのまとめとしたいと思います。
+
+ありがとうございました。
 
 
 ## 著者について
