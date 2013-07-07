@@ -29,7 +29,7 @@ RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では�
 ## 当日の様子
 平日の夕方 18:30 という比較的早い時間からの開催であったためドタキャン等が心配されましたが、蓋を開けてみると開始時間直後でも 70% くらい、最終的には 80% 以上の参加者が参加されていた感触です。
 
-### 基調講演: Laurent Sansonetti さん
+### 基調講演: Laurent Sansonetti (@lrz) さん
 
 なんと、冒頭は日本語でスピーチしてくれました。 (手元の iPhone に watson さん監修のローマ字メモがあったそうです。)
 
@@ -123,7 +123,23 @@ RubyMotion についての説明はここまでで、あとは (主にスベッ�
 
 <script async class="speakerdeck-embed" data-id="36a786d0aab101303c9b3e7747c857c8" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
 
+@mfks17 さんは RubyMotion 以前から iOS アプリケーションの開発を Objective-C でやっていらっしゃる方です。今回は元々 Objective-C の経験のある方から見た RubyMotion という観点から RubyMotion についてお話ししていただきました。
 
+RubyMotion でアプリケーションの開発を行うにあたって、Xcode を使わずに済むという点を挙げられていました。特に設定に関してはわかりにくい GUI での設定ではなく、Rakefile にコードを書くという方法で完結できるのが良いとのことです。
+
+デバッグに関しては RubyMotion では gdb を使ってコマンドラインでのデバッグが可能ですが、RubyMotion にも対応した IDE の [RubyMine](http://www.jetbrains.com/ruby/) を利用することにより、GUI でブレークポイントを置いたり、変数の中身を見たりできると紹介がありました。
+
+RubyMine に関連して、RubyMotion で開発を行うにあたっての以下のような周辺ツールの紹介もありました。
+
+- [motion-mode.el](https://github.com/ainame/motion-mode)
+- [SublimeObjC2RubyMotion](https://github.com/kyamaguchi/SublimeObjC2RubyMotion)
+- [SublimeRubyMotionBuilder](https://github.com/haraken3/SublimeRubyMotionBuilder)
+
+最後にテストツールやフレームワークについての紹介がありました。
+Objective-C で開発する際は OCUnit(SenTestingKit), Kiwi, GHUnit などが広く使われていますが、RubyMotion では MacBacon, motion-calabash などが使えるとのことです。
+そして、テストを日々のワークフローの中に組み込んで習慣化することが大切であるという心がけのお話もありました。
+
+@mfks17 さんは今後 RubyMotion に関わらず iOS の開発に関する勉強会の立ち上げを考えているとのことです。
 
 
 ### LT1 / #inspect 2013 - RubyMotion Conrefence の感想: 井上さん
@@ -134,23 +150,61 @@ RubyMotion についての説明はここまでで、あとは (主にスベッ�
 
 <script async class="speakerdeck-embed" data-id="1a93d7a0aa89013080c73e09fd6c9c49" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
+RubyMotion でゲーム開発をするというテーマで発表していただきました。
 
+[Joybox](https://github.com/rubymotion/Joybox) という [Cocos2D](http://www.cocos2d-iphone.org) と [Box2D](http://box2d.org) のラッパーの紹介と、それを使って作った実際に動作するデモがありました。
+
+[Joybox](https://github.com/rubymotion/Joybox) は [#inspect 2013 - RubyMotion Conrefence](http://www.rubymotion.com/conference/) で発表されたライブラリで、@yonekawa さんは Joybox の最初のコントリビュータとして精力的に開発に関わっていらっしゃいます。
+
+まだまだ仕事で使用するには機能が不足していて辛いとのことですが、今後の開発に期待したいところですね。
 
 
 ### LT3 / RubyMotionについて本気出して考えてみました: @ainame さん
 
 <script async class="speakerdeck-embed" data-id="96dc0ab0ab0c0130efd85a101b549cb4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 
+Emacs 用の RubyMotion の拡張である [motion-mode.el](https://github.com/ainame/motion-mode) を開発された「[神](http://d.hatena.ne.jp/naoya/20130322/1363921458)」こと @ainame さんの発表です。
+
+実際に本気で仕事で RubyMotion を使うためにはどうしたらいいのか、というテーマでの発表でした。
+
+業務で RubyMotion を使おうとした際のハードルとして、以下の 3 点が挙げられていました。
+
+1. 覚えることが多い
+1. 初心者が入門しづらい
+1. 本当に業務で使えるか不安
+
+しかし、以下の点によりむしろ Web アプリケーションの経験がある人にとっては、むしろ新規に Objective-C で iOS の開発を覚えるよりはむしろ始めやすいのではというお話でした。
+
+- 開発スタイルが Web に近い: 使い慣れたエディタ、RSpec like なテスト、コマンドライン中心の開発スタイル、サーバー / クライアント双方を Ruby で書ける
+- サポートの返答が速い: iOS の新しいバージョンへの対応も問い合わせへの対応も速い
+- Ruby の力を信じる: rake, gem などの便利なツール、メタプログラミング、書いていて楽しい
+
+@ainame さんは最近 [RubyMotionTokyo](http://rubymotion-tokyo.doorkeeper.jp) というコミュニティを立ち上げられました。現在、都内で隔週で meetup を開催されているので RubyMotion に関心のある方はぜひ参加されてはいかがでしょうか。
 
 
 ### LT4 / RubyMotion meets IRC: @ninjinkun さん
 
 <script async class="speakerdeck-embed" data-id="d70369f0aafa0130da893e97780925f0" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
 
+@ninjinkun さんは最近 [NJKWebViewProgress](https://github.com/ninjinkun/NJKWebViewProgress) というライブラリを作られて、世界でも注目されている開発者です。
+
+最近 RubyMotion で社内システムのアプリを作っているらしいです。
+
+今回は RubyMotion で IRC のクライアントアプリをつくってみたというお話ですが、RubyMotion では Ruby の文法でメタプログラミングができ、正規表現が使えるという特徴からテキストベースのプロトコルを扱うのに向いているのではないかということがモチベーションになっているそうです。
+
+プロトコルパーサーを実装する際には node.js で書かれたコードを Ruby のコードに翻訳したらそのまま動作したり、CRuby で実装されたコードをコピー & ペーストしたらそのまま動いたりしたそうです。
+
+ソケットの実装には [motion-cocoapods](https://github.com/HipByte/motion-cocoapods) 経由で [GCDAsyncSocket](https://github.com/robbiehanson/CocoaAsyncSocket) を使うことで比較的用意に実装できたそうです。
+
+View は小さな HTML テンプレートエンジンを実装し、UIWebView 上にクライアントサイドの HTML テンプレートを描画することで実装しているそうで、これも実際に動作しているところをデモしていただきました。
+
 
 ### Laurent さんへの Q&A コーナー
 
+\# TODO: 動画を見ながら書く
 
+Q. 現在 C++ で実装されたライブラリを使うには Objective-C でラップする必要がありますが、今後は直接 RubyMotion から使えるようになる予定はありますか？
+A. 
 
 Q. 割引は予定されていますか？  
 A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにするよ
