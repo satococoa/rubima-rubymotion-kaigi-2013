@@ -7,6 +7,10 @@
 
 この記事は [RubyKaigi 2013](http://rubykaigi.org/2013) 前日の 5/29(水) に開催された [RubyMotion Kaigi 2013](http://connpass.com/event/2095/) のレポート記事です。
 
+RubyMotion Kaigi 2013 は日本では初めて開催された RubyMotion のカンファレンスです。
+
+Usteam 上で [動画](http://www.ustream.tv/channel/rubymotion-kaigi-2013) が公開されています。そちらも合わせてご覧頂けると幸いです。
+
 
 ## 開催概要
 
@@ -15,12 +19,10 @@
 - 主催: [RubyMotion JP](http://rubymotion.jp)
 - 公式ページ: [RubyMotion Kaigi 2013](http://connpass.com/event/2095/)
 
-RubyMotion Kaigi 2013 は日本では初めて開催された RubyMotion のカンファレンスです。
-
 
 ## 開催までの流れ
 
-現在、日本の RubyMotion コミュニティである [RubyMotion JP](http://rubymotion.jp) では月に 1 回 "RubyMotion もくもく会" と称し、RubyMotion に関することを自由に実践する勉強会を開催しています。
+日本の RubyMotion ユーザのコミュニティである [RubyMotion JP](http://rubymotion.jp) では月に 1 回 "RubyMotion もくもく会" と称し、RubyMotion に関することを自由に実践する勉強会を開催しています。
 
 そのもくもく会の最中に、「もし (RubyMotion 開発者の) Laurent さんが RubyKaigi で日本にいらっしゃるのなら、それに合わせて日本でもカンファレンスをやってみたらどうか？」という案が挙がりました。
 
@@ -28,31 +30,31 @@ RubyMotion Kaigi 2013 は日本では初めて開催された RubyMotion のカ�
 
 企画・準備・当日の運営までもくもく会の常連メンバーが中心となって進めてゆきました。
 
-また、以前から RubyMotion に関するイベントを複数回開催されている福岡のコミュニティとも協力したいと思い、Ruby Business Commons 最首さんにも声をかけ、ご協力いただきました。
+また、以前から RubyMotion に関するイベントを開催されている福岡のコミュニティとも協力したいと思い、Ruby Business Commons 最首さんにも声をかけさせていただき、とても快くご協力いただきました。
 
 
 ## 当日の様子
 
-平日の夕方 18:30 という比較的早い時間からの開催ではありましたが、とても多くの方に集まっていただき、RubyMotion への関心の高さが感じられました。
+平日の夕方 18:30 という比較的早い時間からの開催ではありましたが、多くの方に集まっていただき RubyMotion への関心の高さが感じられました。
 
 
 ### 基調講演: Laurent Sansonetti (@lrz) さん
 
 なんと、冒頭は日本語で自己紹介をしてくれました。その様子はぜひ USTREAM で公開されている[録画](http://www.ustream.tv/recorded/33482193)をご覧頂ければ幸いです。
 
-自己紹介の後は RubyMotion を支える HipByte 社のチームの紹介があり、それに続いて2013 年 5 月にリリースされた RubyMotion 2.0 の新機能やロードマップについての説明をしていただきました。
+自己紹介の後は RubyMotion を支える HipByte 社のチームの紹介があり、それに続いて2013 年 5 月にリリースされた RubyMotion 2.0 の新機能や今後のロードマップについての説明をしていただきました。
 
-実際に RubyMotion を用いて開発を用いている人にとっては、紹介されたそのどの機能も魅力的であり、みなさん真剣に聴き入っていました。
+実際に RubyMotion を用いて開発をしている人にとっては紹介されたそのどの機能も魅力的でありみなさんとても真剣に聴き入っていました。
 
-ロードマップの最後には今後 RubyMotion では iOS, OSX に加えてもう一つのプラットフォームのサポートを予定しているそうです。どのプラットフォームになるのかは現時点では明らかにされていませんので、続報を待ちたいと思います。
+ロードマップによると今後 RubyMotion では iOS、OS X に加えてもう一つのプラットフォームのサポートを予定しているそうです。どのプラットフォームになるのかは現時点では明らかにされていませんので、続報を待ちたいと思います。
 
 質疑応答では以下の2つが出されました。
 
-Q. CRuby 2.0 の機能 (Refinements, Keyword Arguments, ..etc.) は RubyMotion でもサポートする予定はあるのか？
+Q. CRuby 2.0 の機能 (Refinements, Keyword Arguments, ..etc.) は RubyMotion でもサポートする予定はあるのか？  
 A. その予定はあるけれども、すぐに出来るとは限らない。特に Keyword Arguments は文法的に Objective-C のメソッドのシグネチャとバッティングしてしまうところがあり、扱いが難しい。
 
 Q. Objective-C 由来のメソッド等はなぜ (ruby の慣習に沿ったスネークケースではなく) キャメルケースなのか？  
-A. 全部スネークケースにするのは可能ではあるが、複雑になることが考えられるため、Objective-C 由来のオブジェクトはキャメルケースのままにすることにした。
+A. 全部スネークケースにするのは可能ではあるが、内部的にとても複雑になってしまうため Objective-C 由来のオブジェクトはキャメルケースのままにすることにした。
 
 
 ### 日本における RubyMotion の現状: Ruby Business Commons 最首さん
@@ -75,20 +77,20 @@ RubyMotion のみに関わらず、mruby, mobiruby, Unity など、組み込み�
 その後は RubyMotion の仕組みや特徴についてのお話、RubyMotion 2.0 で搭載された以下の新機能の詳しい紹介をしていただきました。
 
 **OS X Support**  
-Mac OS X 用のアプリケーションが作れるようになりました。以下の点で MacRuby と比べて以下のような特徴があります。
+OS X 用のアプリケーションが作れるようになりました。以下の点で MacRuby と比べて以下のような特徴があります。
 
 - 事前にネイティブにフルコンパイルしているからパフォーマンスが良い
 - スタティックライブラリーが使える
-- require, eval, 標準ライブラリーが使えない
+- require, eval, 標準ライブラリーは使え**ない**
 
 **Project Template**  
-ユーザーが独自のテンプレートを作れる機能です。よく使う gem をあらかじめ Gemfile に書いておいたり、app_delegate.rb で @window をインスタンス化する以下のようなお決まりのコードをテンプレート化しておけます。
+ユーザーが独自のテンプレートを作れる機能です。よく使う gem をあらかじめ Gemfile に書いておいたり、app_delegate.rb で @window をインスタンス化するようなお決まりのコードをテンプレート化しておけます。
 
 **Command-Line Plugin**  
 ユーザー独自のサブコマンドを `motion` コマンドに追加できる機能です。@watson1978 さんがサンプルで作った [motion-doc](https://github.com/Watson1978/motion-doc) コマンドの紹介がありました。
 
 **Common Build Directory**  
-一度コンパイルした gem を他のアプリでも使い回せるようにし、ビルド時間を短縮する機能です。特に [BubbleWrap](http://bubblewrap.io) や [sugarcube](https://github.com/rubymotion/sugarcube) のような大きなライブラリを使うときに効果が発揮されるそうです。
+一度コンパイルした gem を他のアプリでも使い回せるようにし、ビルド時間を短縮する機能です。特に [BubbleWrap](http://bubblewrap.io) や [sugarcube](https://github.com/rubymotion/sugarcube) のような大きなライブラリを使うときに大きな効果が期待できそうです。
 
 **Weak Reference**  
 弱参照をサポートする機能です。RubyMotion には ARC 同様のリファレンスカウンタによる GC が実装されています。オブジェクトを代入する際には自動的にリファレンスカウンタが上がるようになっているのですが、この `WeakRef` を使用することで、リファレンスカウンタを上げずにオブジェクトを参照することが出来ます。
@@ -107,7 +109,7 @@ Mac OS X 用のアプリケーションが作れるようになりました。�
 
 続いて、RubyMotion における `Object` クラスは `NSObject` クラスを継承している作りとなっているため、Cocoa (Touch) の API がそのまま呼べることについての説明がありました。
 
-GCD を使うことによって並行処理も以下のコード例のように Ruby らしくスマートに書けます。
+次に並列処理についてですが、GCD を使うことによって以下のコード例のように Ruby らしくスマートに書けます。
 
 ```
 Dispatche::Queue.concurrent.async do
@@ -126,33 +128,33 @@ RubyMotion のメモリ管理についての説明もありました。
 RubyMotion についての説明はここまでで、あとは実際に RubyMotion で開発する上での Tips や、定番のライブラリの紹介等がありました。
 
 
-
 ### That Objective-C guy think about RubyMotion: @mfks17 さん
 
 <script async class="speakerdeck-embed" data-id="36a786d0aab101303c9b3e7747c857c8" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
 
-@mfks17 さんは RubyMotion 以前から iOS アプリケーションの開発を Objective-C でやっていらっしゃる方です。今回は Objective-C の経験のある方から見た RubyMotion という観点から RubyMotion についてお話ししていただきました。
+@mfks17 さんは RubyMotion 以前から iOS アプリケーションの開発を Objective-C でやっていらっしゃるそうです。
+今回は「Objective-C 経験者から見た RubyMotion」という観点からお話ししていただきました。
 
 RubyMotion でアプリケーションの開発を行うことの利点の一つとして「Xcode を使わずに済む」という点を挙げられていました。
 特にビルド等の設定に関してはわかりにくい GUI での操作ではなく、Rakefile にコードを書くというテキストベースの方法で完結できるのが良いとのことでした。
 
-デバッグに関しては gdb を使ってコマンドラインでのデバッグも可能ですが、RubyMotion にも対応した IDE の [RubyMine](http://www.jetbrains.com/ruby/) を利用することにより、GUI でもデバッグ可能との旨、紹介がありました。
+デバッグに関しては gdb を使ってコマンドラインでのデバッグも可能ですが、RubyMotion にも対応した IDE の [RubyMine](http://www.jetbrains.com/ruby/) を利用することにより、GUI でもデバッグ可能だそうです。
 
-他にも RubyMotion での開発を助けるツールの紹介もありました。
+他にも RubyMotion での開発を助ける以下のツールの紹介もありました。
 
 - [motion-mode.el](https://github.com/ainame/motion-mode)
 - [SublimeObjC2RubyMotion](https://github.com/kyamaguchi/SublimeObjC2RubyMotion)
 - [SublimeRubyMotionBuilder](https://github.com/haraken3/SublimeRubyMotionBuilder)
 
 最後にテストツールやフレームワークについての紹介していただきました。
-Objective-C で開発する際は OCUnit(SenTestingKit), Kiwi, GHUnit などが広く使われていますが、RubyMotion では MacBacon, motion-calabash などが使えるとのことです。
+Objective-C で開発する際は OCUnit(SenTestingKit)、Kiwi、GHUnit などが広く使われているそうですが、RubyMotion では MacBacon、motion-calabash などが使えるとのことです。
 そしてテストを日々のワークフローの中に組み込んで習慣化することが大切であるという心がけのお話もありました。
 
-@mfks17 さんは今後 RubyMotion に関わらず iOS の開発に関する勉強会の立ち上げを考えているとのことです。
+@mfks17 さんは今後 iOS のアプリケーション開発に関する勉強会の立ち上げを考えているとのことです。
 
 
 ### LT1 / #inspect 2013 - RubyMotion Conrefence の感想: 井上さん
-[#inspect 2013 - RubyMotion Conrefence](http://www.rubymotion.com/conference/) に参加した日本人全 4 名のうちの一人、井上さんによる発表でした。カンファレンスに参加する経緯として井上さんのボスの考え方やカンファレンスでの印象に残った発表などについてお話しいただきました。
+[#inspect 2013 - RubyMotion Conrefence](http://www.rubymotion.com/conference/) に参加した日本人全 4 名のうちの一人、井上さんによる発表でした。カンファレンスに参加した経緯やカンファレンスでの印象に残った発表などについてお話しいただきました。
 
 
 ### LT2 / Dive into Joybox: @yonekawa さん
@@ -165,7 +167,7 @@ RubyMotion でゲーム開発をするというテーマで発表していただ
 
 [Joybox](https://github.com/rubymotion/Joybox) は [#inspect 2013 - RubyMotion Conrefence](http://www.rubymotion.com/conference/) で発表されたライブラリで、@yonekawa さんは Joybox の最初のコントリビュータとして精力的に開発に関わっていらっしゃいます。
 
-まだまだ仕事で使用するには機能が不足していて辛いとのことですが、今後の開発に期待したいところですね。
+まだまだ仕事で使用するには機能が不足していて辛いとのことですが、今後の開発に期待したいところです。
 
 
 ### LT3 / RubyMotionについて本気出して考えてみました: @ainame さん
@@ -174,9 +176,9 @@ RubyMotion でゲーム開発をするというテーマで発表していただ
 
 Emacs 用の RubyMotion の拡張である [motion-mode.el](https://github.com/ainame/motion-mode) を開発された「[神](http://d.hatena.ne.jp/naoya/20130322/1363921458)」こと @ainame さんの発表です。
 
-実際に本気で仕事で RubyMotion を使うためにはどうしたらいいのか、というテーマでの発表でした。
+本気で業務で RubyMotion を使うためにはどうしたらいいのか考えてみたというテーマでした。
 
-業務で RubyMotion を使おうとした際のハードルとして、以下の 3 点が挙げられていました。
+まず最初に業務で RubyMotion を使おうとした際のハードルとして、以下の 3 点が挙げられていました。
 
 1. 覚えることが多い
 1. 初心者が入門しづらい
@@ -186,7 +188,7 @@ Emacs 用の RubyMotion の拡張である [motion-mode.el](https://github.com/a
 
 - 開発スタイルが Web に近い: 使い慣れたエディタ、RSpec like なテスト、コマンドライン中心の開発スタイル、サーバー / クライアント双方を Ruby で書ける
 - サポートの返答が速い: iOS の新しいバージョンへの対応も問い合わせへの対応も速い
-- Ruby の力を信じる: rake, gem などの便利なツール、メタプログラミング、書いていて楽しい
+- Ruby の力を信じる: rake、 gem などの便利なツールがあり、メタプログラミングが強力、そして書いていて楽しい
 
 @ainame さんは最近 [RubyMotionTokyo](http://rubymotion-tokyo.doorkeeper.jp) というコミュニティを立ち上げられました。現在、都内で隔週で meetup を開催されているので RubyMotion に関心のある方はぜひ参加されてはいかがでしょうか。
 
@@ -195,13 +197,11 @@ Emacs 用の RubyMotion の拡張である [motion-mode.el](https://github.com/a
 
 <script async class="speakerdeck-embed" data-id="d70369f0aafa0130da893e97780925f0" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
 
-@ninjinkun さんは最近 [NJKWebViewProgress](https://github.com/ninjinkun/NJKWebViewProgress) というライブラリを作られて、世界でも注目されている開発者です。
+@ninjinkun さんは最近 [NJKWebViewProgress](https://github.com/ninjinkun/NJKWebViewProgress) というライブラリを作られて、世界でも注目されている開発者の一人です。
 
-最近 RubyMotion で社内システムのアプリを作っているらしいです。
+今回は RubyMotion で IRC クライアントアプリをつくってみたというお話ですが、RubyMotion では Ruby の文法でメタプログラミングができ、正規表現が使えるという特徴からテキストベースのプロトコルを扱うのに向いているのではないかということがモチベーションになっているそうです。
 
-今回は RubyMotion で IRC のクライアントアプリをつくってみたというお話ですが、RubyMotion では Ruby の文法でメタプログラミングができ、正規表現が使えるという特徴からテキストベースのプロトコルを扱うのに向いているのではないかということがモチベーションになっているそうです。
-
-プロトコルパーサーを実装する際には node.js で書かれたコードを Ruby のコードに翻訳したらそのまま動作したり、CRuby で実装されたコードをコピー & ペーストしたらそのまま動いたりしたそうです。
+プロトコルパーサーを実装する際には node.js で書かれたコードを Ruby のコードに翻訳したらそのまま動作したり、CRuby で実装されたコードをコピー & ペーストしたらそのまま動いたといった経験をお話ししてくださいました。
 
 ソケットの実装には [motion-cocoapods](https://github.com/HipByte/motion-cocoapods) 経由で [GCDAsyncSocket](https://github.com/robbiehanson/CocoaAsyncSocket) を使うことで比較的用意に実装できたそうです。
 
@@ -210,22 +210,24 @@ View は小さな HTML テンプレートエンジンを実装し、UIWebView �
 
 ### Laurent さんへの Q&A コーナー
 
-Q. 現在 C++ で実装されたライブラリを使うには Objective-C でラップする必要がありますが、将来的にはラッパーを作らなくとも直接使えるようになる予定はありますか？
+最後に 20 分ほど Laurent さんへの質問を受け付けるコーナーを設けました。
+
+Q. 現在 C++ で実装されたライブラリを使うには Objective-C でラップする必要がありますが、将来的にはラッパーを作らなくとも直接使えるようになる予定はありますか？  
 A. サポートする予定はない。Objective-C のラッパーを作って呼ぶようにしてほしい。
 
 Q. RubyMotion で static library を作ることができるそうだが、その方法についてのドキュメントはあるのか？  
 A. 現在は forum に投稿したメールやブログのエントリしかドキュメントと呼べる物は無いが、チュートリアルを現在準備中である。
 
 Q. RubyMotion ではなぜ ARC を使わずにメモリ管理を独自に実装しているのか？  
-A. ARC はコンパイラの機能であり、RubyMotion で直接使える物ではないから使っていない。またコンパイル時ではなく実行時にメモリ管理をすることによって、例えば循環参照を検出するなどのより面白いことができると思う。
+A. ARC は Objective-C のコンパイラの機能であり、RubyMotion ではそもそも使えるものではない。またコンパイル時ではなく実行時にメモリ管理をすることによって、例えば循環参照を検出するなどのより面白いことができると思う。
 
 Q. iOS がバージョンアップしたときに RubyMotion はどういう対応をするのか？  
 A. RubyMotion では iOS のバージョンアップに対応することはユーザーが自分で対応をすることも可能であるくらい簡単である。今までも iOS の新しいバージョンが出た当日に対応するようにしている。
 
-Q. RubyMotion のユーザはどのくらいいますか？  
+Q. RubyMotion のユーザはどのくらいいるのか？  
 A. アクティブユーザの数はわからないが、数千人くらいである。今年いっぱいで 1 万ユーザに達すると思われる。また RubyMotion で作られたアプリケーションがどのくらいストアでリリースされているのか、という点についてもわかっていないが、週に 1 つくらいの頻度ではリリースされているようだ。
 
-Q. 割引は予定されていますか？  
+Q. 円安により RubyMotion が手に入りにくくなってしまったが、今後割引などは予定されているか？
 A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにする。
 
 
@@ -233,12 +235,12 @@ A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにする。
 
 - [ツイートまとめ (Togetter)](http://togetter.com/li/510492)
 - [Ustream](http://www.ustream.tv/channel/rubymotion-kaigi-2013)
-- ブログ記事等 (順不同)
-  - [http://blog.ainam.me/2013/05/30/rubymotion-kaigi-misawa-suberu/](http://blog.ainam.me/2013/05/30/rubymotion-kaigi-misawa-suberu/)
-  - [http://mog2dev.hatenablog.com/entry/2013/05/31/014938](http://mog2dev.hatenablog.com/entry/2013/05/31/014938)
-  - [http://d.hatena.ne.jp/mfks17/20130530/1369878790](http://d.hatena.ne.jp/mfks17/20130530/1369878790)
-  - [http://rochefort.hatenablog.com/entry/2013/05/30/004541](http://rochefort.hatenablog.com/entry/2013/05/30/004541)
-  - [http://watson1978.github.io/blog/2013/06/03/rubymotion-kaigi-2013/](http://watson1978.github.io/blog/2013/06/03/rubymotion-kaigi-2013/)
+- ブログ記事 (ありがとうございます！)
+  - [RubyMotion Kaigi 2013 と簡単に Objective-C を実行する方法 - Watson's Blog](http://watson1978.github.io/blog/2013/06/03/rubymotion-kaigi-2013/)
+  - [RubyMotion KaigiでLTしてすべりました #rubymotionjp | ましましブログ](http://blog.ainam.me/2013/05/30/rubymotion-kaigi-misawa-suberu/)
+  - [RubyMotion Kaigi 2013でLTをしてきました - mog2tech](http://mog2dev.hatenablog.com/entry/2013/05/31/014938)
+  - [RubyMotion Kaigi 2013でしゃべってきました - mfks17's diary](http://d.hatena.ne.jp/mfks17/20130530/1369878790)
+  - [RubyMotion Kaigi 2013に参加してきました - rochefort's blog](http://rochefort.hatenablog.com/entry/2013/05/30/004541)
 
 
 ## その後の RubyMotion コミュニティの盛り上がり
