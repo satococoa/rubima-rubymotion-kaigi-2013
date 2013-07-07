@@ -4,9 +4,11 @@
 
 
 ## はじめに
+
 この記事は [RubyKaigi 2013](http://rubykaigi.org/2013) 前日の 5/29(水) に開催された [RubyMotion Kaigi 2013](http://connpass.com/event/2095/) のレポート記事です。
 
 RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では初めて開催された RubyMotion のカンファレンスです。
+
 
 ## 開催概要
 
@@ -17,6 +19,7 @@ RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では�
 
 
 ## 開催までの流れ
+
 現在、日本の RubyMotion コミュニティである [RubyMotion JP](http://rubymotion.jp) では月に 1 回 "RubyMotion もくもく会" と称し、RubyMotion に関することを自由に実践する勉強会を開催しています。
 
 そのもくもく会の最中に、今年 (2013 年) の 3 月にベルギーのブリュッセルで開催された [#inspect 2013 - RubyMotion Conrefence](http://www.rubymotion.com/conference/) の話題になり、その際に「もし Laurent さんが RubyKaigi で日本にいらっしゃるのならそれに合わせて日本でもカンファレンスをやってみたらどうか？」という案が挙がりました。
@@ -27,7 +30,9 @@ RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では�
 
 
 ## 当日の様子
+
 平日の夕方 18:30 という比較的早い時間からの開催であったためドタキャン等が心配されましたが、蓋を開けてみると開始時間直後でも 70% くらい、最終的には 80% 以上の参加者が参加されていた感触です。
+
 
 ### 基調講演: Laurent Sansonetti (@lrz) さん
 
@@ -45,6 +50,7 @@ Q. CRuby 2.0 の機能 (Refinements, Keyword Arguments, ..etc.) は RubyMotion �
 A. その予定はあるけれども、すぐに出来るとは限らない。特に Keyword Arguments は文法的に Objective-C のメソッドのシグネチャとバッティングしてしまうところがあり、扱いが難しい。
 
 \# TODO: ust 見ながら内容についてもう少し詳しく述べる
+
 
 ### 日本における RubyMotion の現状: Ruby Business Commons 最首さん
 
@@ -211,6 +217,7 @@ A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにするよ
 
 
 ## 参加レポートなどのまとめ
+
 - [ツイートまとめ (Togetter)](http://togetter.com/li/510492)
 - [Ustream](http://www.ustream.tv/channel/rubymotion-kaigi-2013)
 - ブログ記事等 (順不同)
@@ -237,3 +244,11 @@ A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにするよ
 
 ## まとめ
 
+
+
+## 著者について
+海老沢 聡 ([@satococoa](https://twitter.com/satococoa))
+
+[株式会社イグニス](http://1923.co.jp) 所属。
+
+[P4D デザイナー向けプログラム部](http://prog4designer.github.io) や [RubyMotion JP](http://rubymotion.jp) をやっています。
