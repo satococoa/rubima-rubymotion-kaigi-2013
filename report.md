@@ -224,6 +224,16 @@ A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにするよ
 
 ## その後の RubyMotion コミュニティの盛り上がり
 
+継続的に開催されている RubyMotion 関連のコミュニティ / 勉強会は従来は [RubyMotion もくもく会](http://connpass.com/series/130/) しかありませんでしたが、この RubyMotion Kaigi 2013 の後に 2 つのコミュニティが立ち上がりました。
+
+[RubyMotion もくもく会 in Osaka](http://connpass.com/event/2731/) (リンク先は第2回) は大阪で開催されているもくもく会です。
+
+[RubyMotionTokyo](http://rubymotion-tokyo.doorkeeper.jp) は都内で隔週で meetup を実施しているコミュニティです。
+
+また、業務で RubyMotion を使っている人も徐々に増えて来ているらしく、会場の参加者のみなさんに「RubyMotion で仕事をしている人はいますか？」と問い合わせたところ、5〜6人の方が手を挙げていらっしゃいました。
+
+2012 年の 7 月に開催した [第一回 RubyMotion 勉強会](http://connpass.com/event/665/) のときは一人しかいなかったので、徐々に広がりつつある感触があります。
+
 
 ## まとめ
 
