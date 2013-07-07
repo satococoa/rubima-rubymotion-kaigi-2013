@@ -7,8 +7,6 @@
 
 この記事は [RubyKaigi 2013](http://rubykaigi.org/2013) 前日の 5/29(水) に開催された [RubyMotion Kaigi 2013](http://connpass.com/event/2095/) のレポート記事です。
 
-RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では初めて開催された RubyMotion のカンファレンスです。
-
 
 ## 開催概要
 
@@ -17,39 +15,44 @@ RubyMotion Kaigi 2013 は参加者 100 名と小規模ながら、日本では�
 - 主催: [RubyMotion JP](http://rubymotion.jp)
 - 公式ページ: [RubyMotion Kaigi 2013](http://connpass.com/event/2095/)
 
+RubyMotion Kaigi 2013 は日本では初めて開催された RubyMotion のカンファレンスです。
+
 
 ## 開催までの流れ
 
 現在、日本の RubyMotion コミュニティである [RubyMotion JP](http://rubymotion.jp) では月に 1 回 "RubyMotion もくもく会" と称し、RubyMotion に関することを自由に実践する勉強会を開催しています。
 
-そのもくもく会の最中に、今年 (2013 年) の 3 月にベルギーのブリュッセルで開催された [#inspect 2013 - RubyMotion Conrefence](http://www.rubymotion.com/conference/) の話題になり、その際に「もし Laurent さんが RubyKaigi で日本にいらっしゃるのならそれに合わせて日本でもカンファレンスをやってみたらどうか？」という案が挙がりました。
+そのもくもく会の最中に、「もし (RubyMotion 開発者の) Laurent さんが RubyKaigi で日本にいらっしゃるのなら、それに合わせて日本でもカンファレンスをやってみたらどうか？」という案が挙がりました。
 
-カンファレンスとは言っても、前述のようにベルギーで世界規模のカンファレンスが開催された直後であるため、日本における RubyMotion の現状やもともと Objective-C で iOS アプリケーションを開発していた人の RubyMotion の印象を話してもらうなどの独自のコンテンツがある方が楽しいのではないか、などと議論し、今回のような形での開催となりました。
+2013 年 3 月にベルギーで世界規模のカンファレンスである [#inspect 2013 - RubyMotion Conference](http://www.rubymotion.com/conference/) が開催された直後であるため、日本における RubyMotion の現状や Objective-C 経験者に RubyMotion の印象を話してもらうなどの独自コンテンツがある方が楽しいのではないかなどと議論し、今回のような形での開催となりました。
 
-企画・準備・当日の運営までもくもく会の常連メンバーが中心となって進めてゆきましたが、せっかく日本で開催するのであれば東京だけではなく、以前から RubyMotion に関するイベントを複数回の開催されている福岡のコミュニティとも協力したいと思い、Ruby Business Commons 最首さんにも声をかけ、ご協力いただきました。
+企画・準備・当日の運営までもくもく会の常連メンバーが中心となって進めてゆきました。
+
+また、以前から RubyMotion に関するイベントを複数回開催されている福岡のコミュニティとも協力したいと思い、Ruby Business Commons 最首さんにも声をかけ、ご協力いただきました。
 
 
 ## 当日の様子
 
-平日の夕方 18:30 という比較的早い時間からの開催であったためドタキャン等が心配されましたが、蓋を開けてみると開始時間直後でも 70% くらい、最終的には 80% 以上の参加者が参加されていた感触です。
+平日の夕方 18:30 という比較的早い時間からの開催ではありましたが、とても多くの方に集まっていただき、RubyMotion への関心の高さが感じられました。
 
 
 ### 基調講演: Laurent Sansonetti (@lrz) さん
 
-なんと、冒頭は日本語でスピーチしてくれました。 (手元の iPhone に watson さん監修のローマ字メモがあったそうです。)
+なんと、冒頭は日本語で自己紹介をしてくれました。その様子はぜひ USTREAM で公開されている[録画](http://www.ustream.tv/recorded/33482193)をご覧頂ければ幸いです。
 
-日本語で自己紹介と、スト 2 の地図を使用してベルギーの位置を確認した後は普通に英語で RubyMotion についての紹介をしていただきました。
+自己紹介の後は RubyMotion を支える HipByte 社のチームの紹介があり、それに続いて2013 年 5 月にリリースされた RubyMotion 2.0 の新機能やロードマップについての説明をしていただきました。
 
-RubyMotion のリリースから 1 年が経ったこと、数多くの RubyMotion 製の iOS アプリケーションが App Store で配布されてることなど。
+実際に RubyMotion を用いて開発を用いている人にとっては、紹介されたそのどの機能も魅力的であり、みなさん真剣に聴き入っていました。
 
-その中でも RubyMotion 2.0 についての話が、現在 RubyMotion を使用している人にとっては特に興味深かったかと思われます。
+ロードマップの最後には今後 RubyMotion では iOS, OSX に加えてもう一つのプラットフォームのサポートを予定しているそうです。どのプラットフォームになるのかは現時点では明らかにされていませんので、続報を待ちたいと思います。
 
 質疑応答では以下の2つが出されました。
 
-Q. CRuby 2.0 の機能 (Refinements, Keyword Arguments, ..etc.) は RubyMotion でもサポートする予定ですか？  
+Q. CRuby 2.0 の機能 (Refinements, Keyword Arguments, ..etc.) は RubyMotion でもサポートする予定はあるのか？
 A. その予定はあるけれども、すぐに出来るとは限らない。特に Keyword Arguments は文法的に Objective-C のメソッドのシグネチャとバッティングしてしまうところがあり、扱いが難しい。
 
-\# TODO: ust 見ながら内容についてもう少し詳しく述べる
+Q. Objective-C 由来のメソッド等はなぜ (ruby の慣習に沿ったスネークケースではなく) キャメルケースなのか？  
+A. 全部スネークケースにするのは可能ではあるが、複雑になることが考えられるため、Objective-C 由来のオブジェクトはキャメルケースのままにすることにした。
 
 
 ### 日本における RubyMotion の現状: Ruby Business Commons 最首さん
@@ -57,6 +60,8 @@ A. その予定はあるけれども、すぐに出来るとは限らない。�
 RubyMotion のみに関わらず、mruby, mobiruby, Unity など、組み込みやスマートフォンという大きな括りで昨今 Ruby が注目を浴びているというお話をしていただきました。
 
 やはり東京と比較しても福岡では特に組み込みの盛り上がりが大きいらしいという印象を持ちました。
+
+最首さんご自身でも RubyMotion を使って iOS アプリケーションを開発してみたそうで、その生産性に好印象を持ったそうです。
 
 
 ### RubyMotion 2.0: @watson1978 さん
@@ -89,8 +94,6 @@ Mac OS X 用のアプリケーションが作れるようになりました。�
 弱参照をサポートする機能です。RubyMotion には ARC 同様のリファレンスカウンタによる GC が実装されています。オブジェクトを代入する際には自動的にリファレンスカウンタが上がるようになっているのですが、この `WeakRef` を使用することで、リファレンスカウンタを上げずにオブジェクトを参照することが出来ます。
 
 
-質疑応答の際には Laurent さんから発表資料のデータに関する質問が飛んでいました。
-
 
 ### 実践 RubyMotion: @naoya_ito さん
 
@@ -120,30 +123,30 @@ end
 
 RubyMotion のメモリ管理についての説明もありました。
 
-RubyMotion についての説明はここまでで、あとは (主にスベッた) ネタを交えながら実際に RubyMotion で開発する上での Tips や、定番のライブラリの紹介等がありました。
+RubyMotion についての説明はここまでで、あとは実際に RubyMotion で開発する上での Tips や、定番のライブラリの紹介等がありました。
 
-詳しくは [スライド](https://speakerdeck.com/naoya/shi-jian-rubymotion) を見ていただくと詳しく書かれていますので良いかと思われます。
 
 
 ### That Objective-C guy think about RubyMotion: @mfks17 さん
 
 <script async class="speakerdeck-embed" data-id="36a786d0aab101303c9b3e7747c857c8" data-ratio="1.2994923857868" src="//speakerdeck.com/assets/embed.js"></script>
 
-@mfks17 さんは RubyMotion 以前から iOS アプリケーションの開発を Objective-C でやっていらっしゃる方です。今回は元々 Objective-C の経験のある方から見た RubyMotion という観点から RubyMotion についてお話ししていただきました。
+@mfks17 さんは RubyMotion 以前から iOS アプリケーションの開発を Objective-C でやっていらっしゃる方です。今回は Objective-C の経験のある方から見た RubyMotion という観点から RubyMotion についてお話ししていただきました。
 
-RubyMotion でアプリケーションの開発を行うにあたって、Xcode を使わずに済むという点を挙げられていました。特に設定に関してはわかりにくい GUI での設定ではなく、Rakefile にコードを書くという方法で完結できるのが良いとのことです。
+RubyMotion でアプリケーションの開発を行うことの利点の一つとして「Xcode を使わずに済む」という点を挙げられていました。
+特にビルド等の設定に関してはわかりにくい GUI での操作ではなく、Rakefile にコードを書くというテキストベースの方法で完結できるのが良いとのことでした。
 
-デバッグに関しては RubyMotion では gdb を使ってコマンドラインでのデバッグが可能ですが、RubyMotion にも対応した IDE の [RubyMine](http://www.jetbrains.com/ruby/) を利用することにより、GUI でブレークポイントを置いたり、変数の中身を見たりできると紹介がありました。
+デバッグに関しては gdb を使ってコマンドラインでのデバッグも可能ですが、RubyMotion にも対応した IDE の [RubyMine](http://www.jetbrains.com/ruby/) を利用することにより、GUI でもデバッグ可能との旨、紹介がありました。
 
-RubyMine に関連して、RubyMotion で開発を行うにあたっての以下のような周辺ツールの紹介もありました。
+他にも RubyMotion での開発を助けるツールの紹介もありました。
 
 - [motion-mode.el](https://github.com/ainame/motion-mode)
 - [SublimeObjC2RubyMotion](https://github.com/kyamaguchi/SublimeObjC2RubyMotion)
 - [SublimeRubyMotionBuilder](https://github.com/haraken3/SublimeRubyMotionBuilder)
 
-最後にテストツールやフレームワークについての紹介がありました。
+最後にテストツールやフレームワークについての紹介していただきました。
 Objective-C で開発する際は OCUnit(SenTestingKit), Kiwi, GHUnit などが広く使われていますが、RubyMotion では MacBacon, motion-calabash などが使えるとのことです。
-そして、テストを日々のワークフローの中に組み込んで習慣化することが大切であるという心がけのお話もありました。
+そしてテストを日々のワークフローの中に組み込んで習慣化することが大切であるという心がけのお話もありました。
 
 @mfks17 さんは今後 RubyMotion に関わらず iOS の開発に関する勉強会の立ち上げを考えているとのことです。
 
@@ -207,13 +210,23 @@ View は小さな HTML テンプレートエンジンを実装し、UIWebView �
 
 ### Laurent さんへの Q&A コーナー
 
-\# TODO: 動画を見ながら書く
+Q. 現在 C++ で実装されたライブラリを使うには Objective-C でラップする必要がありますが、将来的にはラッパーを作らなくとも直接使えるようになる予定はありますか？
+A. サポートする予定はない。Objective-C のラッパーを作って呼ぶようにしてほしい。
 
-Q. 現在 C++ で実装されたライブラリを使うには Objective-C でラップする必要がありますが、今後は直接 RubyMotion から使えるようになる予定はありますか？
-A. 
+Q. RubyMotion で static library を作ることができるそうだが、その方法についてのドキュメントはあるのか？  
+A. 現在は forum に投稿したメールやブログのエントリしかドキュメントと呼べる物は無いが、チュートリアルを現在準備中である。
+
+Q. RubyMotion ではなぜ ARC を使わずにメモリ管理を独自に実装しているのか？  
+A. ARC はコンパイラの機能であり、RubyMotion で直接使える物ではないから使っていない。またコンパイル時ではなく実行時にメモリ管理をすることによって、例えば循環参照を検出するなどのより面白いことができると思う。
+
+Q. iOS がバージョンアップしたときに RubyMotion はどういう対応をするのか？  
+A. RubyMotion では iOS のバージョンアップに対応することはユーザーが自分で対応をすることも可能であるくらい簡単である。今までも iOS の新しいバージョンが出た当日に対応するようにしている。
+
+Q. RubyMotion のユーザはどのくらいいますか？  
+A. アクティブユーザの数はわからないが、数千人くらいである。今年いっぱいで 1 万ユーザに達すると思われる。また RubyMotion で作られたアプリケーションがどのくらいストアでリリースされているのか、という点についてもわかっていないが、週に 1 つくらいの頻度ではリリースされているようだ。
 
 Q. 割引は予定されていますか？  
-A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにするよ
+A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにする。
 
 
 ## 参加レポートなどのまとめ
@@ -221,12 +234,11 @@ A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにするよ
 - [ツイートまとめ (Togetter)](http://togetter.com/li/510492)
 - [Ustream](http://www.ustream.tv/channel/rubymotion-kaigi-2013)
 - ブログ記事等 (順不同)
-  - http://blog.ainam.me/2013/05/30/rubymotion-kaigi-misawa-suberu/
-  - http://mog2dev.hatenablog.com/entry/2013/05/31/014938
-  - http://d.hatena.ne.jp/mfks17/20130530/1369878790
-  - https://www.evernote.com/shard/s9/sh/ba409673-122d-43a1-86b0-  ec12063cc991/22a85b8a08b65884c00846b38919038c
-  - http://rochefort.hatenablog.com/entry/2013/05/30/004541
-  - http://watson1978.github.io/blog/2013/06/03/rubymotion-kaigi-2013/
+  - [http://blog.ainam.me/2013/05/30/rubymotion-kaigi-misawa-suberu/](http://blog.ainam.me/2013/05/30/rubymotion-kaigi-misawa-suberu/)
+  - [http://mog2dev.hatenablog.com/entry/2013/05/31/014938](http://mog2dev.hatenablog.com/entry/2013/05/31/014938)
+  - [http://d.hatena.ne.jp/mfks17/20130530/1369878790](http://d.hatena.ne.jp/mfks17/20130530/1369878790)
+  - [http://rochefort.hatenablog.com/entry/2013/05/30/004541](http://rochefort.hatenablog.com/entry/2013/05/30/004541)
+  - [http://watson1978.github.io/blog/2013/06/03/rubymotion-kaigi-2013/](http://watson1978.github.io/blog/2013/06/03/rubymotion-kaigi-2013/)
 
 
 ## その後の RubyMotion コミュニティの盛り上がり
@@ -241,9 +253,7 @@ A. RubyKaigi 割引で RubyKaigi 期間中は 15% 引きにするよ
 
 2012 年の 7 月に開催した [第一回 RubyMotion 勉強会](http://connpass.com/event/665/) のときは一人しかいなかったので、徐々に広がりつつある感触があります。
 
-
-## まとめ
-
+コミュニティの盛り上がりと共に開発環境がますます改善され、RubyMotion を使ってたくさんの素晴らしいアプリケーションが開発されることを望みます。
 
 
 ## 著者について
